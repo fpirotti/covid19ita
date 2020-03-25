@@ -134,7 +134,7 @@ dashboard_body <- function() {dashboardBody(
   tabItem(tabName = "home",
     fluidPage(title = HTML("Progetto <strong>covid19ita</strong>"),
 
-      p('Nota: sito ottimizzato per l\'uso da PC, in caso di utilizzo da cellulare o tablet si consiglia di tenere il dispositivo in modalità "orizzontale".'),
+      p('Nota: sito ottimizzato per l\'uso da PC, in caso di utilizzo da cellulare o tablet si consiglia di tenere il dispositivo in modalit\u00E0 "orizzontale".'),
 
       # box(width = 12, solidHeader = TRUE,
       #   mod_img_header_ui("logo_testa")
