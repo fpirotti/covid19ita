@@ -151,34 +151,34 @@ dashboard_body <- function() {dashboardBody(
 
       box(width = 12,
         p(
-          HTML("Il progetto <strong>covid19ita</strong> è stato sviluppato dall'"),
-          a(href = 'https://ubesp.jimdofree.com/', target = '_blank', 'Unità di Biostatistica, Epidemiologia, e Sanità Pubblica'),
-          " del ", a(href = 'https://www.dctv.unipd.it/', target = '_blank', 'Dipartimento di Scienze Cardio- Toraco- Vascolari e Sanità Pubblica'),
-          " dell'", a(href = 'https://www.unipd.it/', target = '_blank', 'Università degli Studi di Padova'), ",",
+          HTML("Il progetto <strong>covid19ita</strong> \u00E8 stato sviluppato dall'"),
+          a(href = 'https://ubesp.jimdofree.com/', target = '_blank', 'Unit\u00E0 di Biostatistica, Epidemiologia, e Sanit\u00E0 Pubblica'),
+          " del ", a(href = 'https://www.dctv.unipd.it/', target = '_blank', 'Dipartimento di Scienze Cardio- Toraco- Vascolari e Sanit\u00E0 Pubblica'),
+          " dell'", a(href = 'https://www.unipd.it/', target = '_blank', 'Universit\u00E0 degli Studi di Padova'), ",",
           " in collaborazione con il ", a(href = 'https://www.dscb.unito.it/do/gruppi.pl/Tree', target = '_blank', 'Dipartimento di Scienze Cliniche e Biologiche'),
-          " dell'", a(href = 'https://www.unito.it/', target = '_blank', 'Università degli Studi di Torino'), ",",
+          " dell'", a(href = 'https://www.unito.it/', target = '_blank', 'Universit\u00E0 degli Studi di Torino'), ",",
           " e del", a(href = 'https://www.dimet.uniupo.it/', target = '_blank', 'Dipartimento di Medicina Traslazionale'),
-          " dell'", a(href = 'https://www.uniupo.it/', target = '_blank', 'Università del Piemonte Orientale'), "."
+          " dell'", a(href = 'https://www.uniupo.it/', target = '_blank', 'Universit\u00E0 del Piemonte Orientale'), "."
         )
       ),
 
       h2("Gruppo di lavoro"),
       box(width = 12, title = HTML("<strong>Coordinatore del progetto</strong>"),
         p(
-          HTML("Prof. <strong>Dario Gregori</strong>, Ph.D., responsabile dell'Unità di
-            Biostatistica, Epidemiologia e Sanità Pubblica del Dipartimento
-            di Scienze Cardio- Toraco- Vascolari e Sanità Pubblica --
-            Università degli studi di Padova."
+          HTML("Prof. <strong>Dario Gregori</strong>, Ph.D., responsabile dell'Unit\u00E0 di
+            Biostatistica, Epidemiologia e Sanit\u00E0 Pubblica del Dipartimento
+            di Scienze Cardio- Toraco- Vascolari e Sanit\u00E0 Pubblica --
+            Universit\u00E0 degli studi di Padova."
           ),
           a(href = "https://linkedin.com/in/dario-gregori-2720039/", target = "_blank", "LinkedIn")
         )
       ),
 
       box(width = 12, title = HTML("<strong>Sviluppo applicazione e R package</strong>"),
-        p(HTML("<strong>Corrado Lanera</strong>, Ph.D., Unità di
-          Biostatistica, Epidemiologia e Sanità Pubblica del Dipartimento
-          di Scienze Cardio- Toraco- Vascolari e Sanità Pubblica --
-          Università degli studi di Padova. Responsabile del Laboratorio di Intelligenza Artificiale per le Scienze Mediche"),
+        p(HTML("<strong>Corrado Lanera</strong>, Ph.D., Unit\u00E0 di
+          Biostatistica, Epidemiologia e Sanit\u00E0 Pubblica del Dipartimento
+          di Scienze Cardio- Toraco- Vascolari e Sanit\u00E0 Pubblica --
+          Universit\u00E0 degli studi di Padova. Responsabile del Laboratorio di Intelligenza Artificiale per le Scienze Mediche"),
           a(href = "https://linkedin.com/in/corradolanera/", target = "_blank", "LinkedIn")
         )
       ),
@@ -186,7 +186,7 @@ dashboard_body <- function() {dashboardBody(
       box(width = 12, title = HTML("<strong>Modellistica Epidemiologica</strong>"),
         p(
           HTML("Prof. <strong>Paola Berchialla</strong>, Ph.D., Dipartimento di Scienze
-            Cliniche e Biologiche -- Università degli Studi di Torino"
+            Cliniche e Biologiche -- Universit\u00E0 degli Studi di Torino"
           ),
           a(href = "https://linkedin.com/in/paola-berchialla-36b44410/", target = "_blank", "LinkedIn")
         ),
@@ -194,7 +194,7 @@ dashboard_body <- function() {dashboardBody(
           HTML(
             'Prof. <strong>Dolores Catelan</strong>, Ph.D., Dipartimento di
             Statistica, Informatica, Applicazioni "G. Parenti" (DISIA),
-            Università degli Studi di Firenze'
+            Universit\u00E0 degli Studi di Firenze'
           ),
           a(
             href = "https://www.linkedin.com/in/dolores-catelan-43998b23/",
@@ -205,13 +205,13 @@ dashboard_body <- function() {dashboardBody(
 
       box(width = 12, title = HTML("<strong>Modelli Previsivi</strong>"),
           p(HTML("<strong>Danila Azzolina</strong>, Ph.D., Dipartimento di Medicina Traslazionale --
-          Università del Piemonte Orientale"),
+          Universit\u00E0 del Piemonte Orientale"),
             a(href = "https://linkedin.com/in/danila-azzolina-862465166/", target = "_blank", "LinkedIn")
           ),
-          p(HTML("<strong>Ilaria Prosepe</strong>, MSc., Unità di
-           Biostatistica, Epidemiologia e Sanità Pubblica del Dipartimento
-           di Scienze Cardio- Toraco- Vascolari e Sanità Pubblica --
-           Università degli studi di Padova."),
+          p(HTML("<strong>Ilaria Prosepe</strong>, MSc., Unit\u00E0 di
+           Biostatistica, Epidemiologia e Sanit\u00E0 Pubblica del Dipartimento
+           di Scienze Cardio- Toraco- Vascolari e Sanit\u00E0 Pubblica --
+           Universit\u00E0 degli studi di Padova."),
             a(href = "https://linkedin.com/in/ilaria-prosepe-1b52371a4/", target = "_blank", "LinkedIn")
           )
       ),
@@ -221,48 +221,48 @@ dashboard_body <- function() {dashboardBody(
             HTML(
               'Prof. <strong>Annibale Biggeri</strong>, MD, MSPH, MSB,
               Dipartimento di Statistica, Informatica, Applicazioni
-              "G. Parenti" (DISIA), Università degli Studi di Firenze'
+              "G. Parenti" (DISIA), Universit\u00E0 degli Studi di Firenze'
             ),
             a(href = "https://linkedin.com/in/danila-azzolina-862465166/", target = "_blank", "LinkedIn")
           ),
           p(
             HTML(
-              'Prof. <strong>Cristina Canova</strong>, Ph.D., Unità di
-           Biostatistica, Epidemiologia e Sanità Pubblica del Dipartimento
-           di Scienze Cardio- Toraco- Vascolari e Sanità Pubblica --
-           Università degli studi di Padova.'
+              'Prof. <strong>Cristina Canova</strong>, Ph.D., Unit\u00E0 di
+           Biostatistica, Epidemiologia e Sanit\u00E0 Pubblica del Dipartimento
+           di Scienze Cardio- Toraco- Vascolari e Sanit\u00E0 Pubblica --
+           Universit\u00E0 degli studi di Padova.'
             ),
             a(href = "https://www.linkedin.com/in/cristina-canova-05448861/", target = "_blank", "LinkedIn")
           ),
-          p(HTML("<strong>Elisa Gallo</strong>, MSc., Unità di
-           Biostatistica, Epidemiologia e Sanità Pubblica del Dipartimento
-           di Scienze Cardio- Toraco- Vascolari e Sanità Pubblica --
-           Università degli studi di Padova."),
+          p(HTML("<strong>Elisa Gallo</strong>, MSc., Unit\u00E0 di
+           Biostatistica, Epidemiologia e Sanit\u00E0 Pubblica del Dipartimento
+           di Scienze Cardio- Toraco- Vascolari e Sanit\u00E0 Pubblica --
+           Universit\u00E0 degli studi di Padova."),
             a(href = "https://www.linkedin.com/in/elisa-gallo-9b3933152/", target = "_blank", "LinkedIn")
           ),
-          p(HTML("<strong>Francesco Garzotto</strong>, MSc, Unità di
-           Biostatistica, Epidemiologia e Sanità Pubblica del Dipartimento
-           di Scienze Cardio- Toraco- Vascolari e Sanità Pubblica --
-           Università degli studi di Padova."),
+          p(HTML("<strong>Francesco Garzotto</strong>, MSc, Unit\u00E0 di
+           Biostatistica, Epidemiologia e Sanit\u00E0 Pubblica del Dipartimento
+           di Scienze Cardio- Toraco- Vascolari e Sanit\u00E0 Pubblica --
+           Universit\u00E0 degli studi di Padova."),
             a(href = "https://www.linkedin.com/in/francesco-garzotto-19907826/", target = "_blank", "LinkedIn")
           )
       ),
 
       box(width = 12, title = HTML("<strong>Comunicazione del Rischio</strong>"),
         p(
-          HTML("<strong>Giulia Lorenzoni</strong>, Ph.D., Unità di
-            Biostatistica, Epidemiologia e Sanità Pubblica del Dipartimento
-            di Scienze Cardio- Toraco- Vascolari e Sanità Pubblica --
-            Università degli studi di Padova. Responsabile del Laboratorio di Epidemiologia Clinica e Digital Health"
+          HTML("<strong>Giulia Lorenzoni</strong>, Ph.D., Unit\u00E0 di
+            Biostatistica, Epidemiologia e Sanit\u00E0 Pubblica del Dipartimento
+            di Scienze Cardio- Toraco- Vascolari e Sanit\u00E0 Pubblica --
+            Universit\u00E0 degli studi di Padova. Responsabile del Laboratorio di Epidemiologia Clinica e Digital Health"
           ),
           a(href = "https://linkedin.com/in/giulia-lorenzoni-b382a6180", target = "_blank", "LinkedIn")
         ),
         p(
           HTML(
-            "<strong>Nicolas Destro</strong>, MA, Unità di
-            Biostatistica, Epidemiologia e Sanità Pubblica del Dipartimento
-            di Scienze Cardio- Toraco- Vascolari e Sanità Pubblica --
-            Università degli studi di Padova."
+            "<strong>Nicolas Destro</strong>, MA, Unit\u00E0 di
+            Biostatistica, Epidemiologia e Sanit\u00E0 Pubblica del Dipartimento
+            di Scienze Cardio- Toraco- Vascolari e Sanit\u00E0 Pubblica --
+            Universit\u00E0 degli studi di Padova."
           ),
           a(href = "https://www.linkedin.com/in/nicolas-destro-b2a67212b/", target = "_blank", "LinkedIn")
         )
@@ -286,8 +286,8 @@ dashboard_body <- function() {dashboardBody(
       box(width = 12, title = HTML("<strong>Utilizzo dei grafici dinamici</strong>"),
           p(HTML("La maggior parte dei grafici riportati nel sito sono dinamici in due modi distinti:")),
           p(""),
-          p(HTML("1. <strong>rispetto alle informazioni riportate</strong>: all'interno del grafico è possibile <strong>visualizzare ulteriori dettagli</strong> passando il cursore o facendo click sui vari punti/curve riportate, è possibile <strong>zoommare</strong> su alcune zone di interesse tramite i pulsanti +/- in semi-trasparenza in alto a destra nel grafico (o selezionando l'area con il puntatore). Nel caso di informazioni multiple (per esempio più regioni o più misure) riportate nello stesso grafico, è possibile <strong>escludere alcune informazioni</strong> facendo click sulla relativa voce in legenda, o <strong>mantenere attiva una sola informazione di interesse</strong> tramite un doppio click. È inoltre possibile <strong>salvare ciascun grafico</strong>, in modo indipendente e così come visualizzato, selezionando l'icona semitrasparente della macchina fotografica. Tramite la pressione dell'icona a forma di casetta è possibile <strong>ripristinare la visione originale</strong> del grafico visualizzato.")),
-          p(HTML("2. <strong>rispetto a quali/quante informazioni elaborare e riportare</strong>: In caso compaiano delle celle sopra il grafico in cui poter selezionare <strong>regioni, province o misure, è possibile sia escluderne che aggiungerne</strong> di ulteriori (tra quelle disponibili selezionando il riquadro). Una volta selezionato o deselezionato quanto di interesse, i grafici si aggiorneranno moltiplicandosi o riducendosi, così come moltiplicando o riducento le infornmazioni contenute in ciascuno di essi.")),
+          p(HTML("1. <strong>rispetto alle informazioni riportate</strong>: all'interno del grafico \u00E8 possibile <strong>visualizzare ulteriori dettagli</strong> passando il cursore o facendo click sui vari punti/curve riportate, \u00E8 possibile <strong>zoommare</strong> su alcune zone di interesse tramite i pulsanti +/- in semi-trasparenza in alto a destra nel grafico (o selezionando l'area con il puntatore). Nel caso di informazioni multiple (per esempio pi\u00F9 regioni o pi\u00F9 misure) riportate nello stesso grafico, \u00E8 possibile <strong>escludere alcune informazioni</strong> facendo click sulla relativa voce in legenda, o <strong>mantenere attiva una sola informazione di interesse</strong> tramite un doppio click. \u00E8 inoltre possibile <strong>salvare ciascun grafico</strong>, in modo indipendente e cos\u00EC come visualizzato, selezionando l'icona semitrasparente della macchina fotografica. Tramite la pressione dell'icona a forma di casetta \u00E8 possibile <strong>ripristinare la visione originale</strong> del grafico visualizzato.")),
+          p(HTML("2. <strong>rispetto a quali/quante informazioni elaborare e riportare</strong>: In caso compaiano delle celle sopra il grafico in cui poter selezionare <strong>regioni, province o misure, \u00E8 possibile sia escluderne che aggiungerne</strong> di ulteriori (tra quelle disponibili selezionando il riquadro). Una volta selezionato o deselezionato quanto di interesse, i grafici si aggiorneranno moltiplicandosi o riducendosi, cos\u00EC come moltiplicando o riducento le infornmazioni contenute in ciascuno di essi.")),
       ),
 
     )
@@ -295,7 +295,7 @@ dashboard_body <- function() {dashboardBody(
   ),
 
   tabItem(tabName = "20200331Comp",
-          h2("Analisi comparativa tra Regione Piemonte e Regione Veneto dei dati epidemiologici relativi all’infezione da Covid-19."),
+          h2("Analisi comparativa tra Regione Piemonte e Regione Veneto dei dati epidemiologici relativi all'infezione da Covid-19."),
           mod_focus_20200331_ui("ven_pie")
   ),
   tabItem(tabName = "20200328Tot_hosp",
@@ -344,7 +344,7 @@ dashboard_body <- function() {dashboardBody(
   tabItem(tabName = "national",
     h2("Eventi nazionali"),
     box(width = 12, title = "Istruzioni",
-      p("È possibile attivare/disattivare la visualizzazione di una o più misure dal grafico facendo click sulle corrispondenti voci in legenda. Doppio-click per attivare/disattivare la visualizzazione esclusiva della voce selezionata."),
+      p("\u00E8 possibile attivare/disattivare la visualizzazione di una o pi\u00F9 misure dal grafico facendo click sulle corrispondenti voci in legenda. Doppio-click per attivare/disattivare la visualizzazione esclusiva della voce selezionata."),
       p("Fare click sul pulsante autoscale (terzo) per espandere il grafico alla massima grandezza interamente visionabile."),
     ),
     mod_ts_ita_ui("ts_nat_cum", title = "Serie storiche degli eventi cumulati"),
@@ -355,10 +355,10 @@ dashboard_body <- function() {dashboardBody(
   tabItem(tabName = "regional",
     h2("Eventi regionali"),
     box(width = 12, title = "Istruzioni",
-      p("È possibile aggiungere o rimuovere la computazione dei grafici per una o più regione/misura selezionandola o deselezionandola dal corrispondente box."),
-      p("NOTA: la misurazione dei tamponi effettuati è selezionabile ma disattivata di default in quanto fuori scala rispetto alle altre misure."),
+      p("\u00E8 possibile aggiungere o rimuovere la computazione dei grafici per una o pi\u00F9 regione/misura selezionandola o deselezionandola dal corrispondente box."),
+      p("NOTA: la misurazione dei tamponi effettuati \u00E8 selezionabile ma disattivata di default in quanto fuori scala rispetto alle altre misure."),
       p(""),
-      p("È possibile attivare/disattivare la visualizzazione di una o più regioni/misure dal grafico facendo click sulle corrispondenti voci in legenda. Doppio-click per attivare/disattivare la visualizzazione esclusiva della voce selezionata."),
+      p("\u00E8 possibile attivare/disattivare la visualizzazione di una o pi\u00F9 regioni/misure dal grafico facendo click sulle corrispondenti voci in legenda. Doppio-click per attivare/disattivare la visualizzazione esclusiva della voce selezionata."),
       p("Fare click sul pulsante autoscale (terzo) per espandere il grafico alla massima grandezza interamente visionabile."),
     ),
 
@@ -393,8 +393,8 @@ dashboard_body <- function() {dashboardBody(
 
   tabItem(tabName = "provincial",
     h2("Eventi provinciali"),
-    p("È possibile aggiungere o rimuovere la computazione dei grafici per una o più regione selezionandola o deselezionandola dal corrispondente box."),
-    p("È possibile attivare/disattivare la visualizzazione di una o più regioni dal grafico facendo click sulle corrispondenti voci in legenda. Doppio-click per attivare/disattivare la visualizzazione esclusiva della voce selezionata."),
+    p("\u00E8 possibile aggiungere o rimuovere la computazione dei grafici per una o pi\u00F9 regione selezionandola o deselezionandola dal corrispondente box."),
+    p("\u00E8 possibile attivare/disattivare la visualizzazione di una o pi\u00F9 regioni dal grafico facendo click sulle corrispondenti voci in legenda. Doppio-click per attivare/disattivare la visualizzazione esclusiva della voce selezionata."),
     p("Fare click sul pulsante autoscale (terzo) per espandere il grafico alla massima grandezza interamente visionabile."),
 
     h3("Serie storiche"),
@@ -420,7 +420,7 @@ dashboard_body <- function() {dashboardBody(
       'Tali dati sono inizialmente gestiti, processati e messi a disposizione dalla ',
       a(href = "http://www.protezionecivile.it/web/guest/home", target = "_blank", "Presidenza del Consiglio dei Ministri - Dipartimento di Protezione Civile"),
       ' con licenza ', a(href = "https://creativecommons.org/licenses/by/4.0/deed.en", target = "_blank", "CC-BY-4.0"),
-      'così come forniti dal ', a(href = "", target = "_blank", "Ministero della Salute.")
+      'cos\u00EC come forniti dal ', a(href = "", target = "_blank", "Ministero della Salute.")
     ),
 
     p('Di norma, i dati sono aggiornati alle ore 18:00 di ogni giorno.'),
@@ -432,7 +432,7 @@ dashboard_body <- function() {dashboardBody(
     ),
 
     h2("Software"),
-    p(HTML("L'applicazione <strong>covid19ita</strong> è stata sviluppata in R ver. 3.6.3 come un suo pacchetto di espansione. Il codice sorgente del pacchetto e dell'applicazione è liberamente disponibile disponibile su GitHub all'indirizzo "),
+    p(HTML("L'applicazione <strong>covid19ita</strong> \u00E8 stata sviluppata in R ver. 3.6.3 come un suo pacchetto di espansione. Il codice sorgente del pacchetto e dell'applicazione \u00E8 liberamente disponibile disponibile su GitHub all'indirizzo "),
       a(href = 'https://github.com/UBESP-DCTV/covid19ita/', target = '_blank', 'https://github.com/UBESP-DCTV/covid19ita/'), "."
     ),
 
@@ -444,7 +444,7 @@ dashboard_body <- function() {dashboardBody(
 
     h3('Nota per gli utilizzatori di R'),
     p(
-      'Oltre a questa stessa applicazione in sé (che può essere eseguita localmente installando il pacchetto {covid19ita} ed eseguendo l\'istruzione `run_app()`), ll pacchetto R {covid19ita}, disponibile su ',
+      'Oltre a questa stessa applicazione in s\u00E9 (che pu\u00F2 essere eseguita localmente installando il pacchetto {covid19ita} ed eseguendo l\'istruzione `run_app()`), ll pacchetto R {covid19ita}, disponibile su ',
       a(href = 'https://github.com/UBESP-DCTV/covid19ita/', target = '_blank', 'GitHub'),
       ' e sviluppato anch\'esso sotto licenza ',
       a(href = "https://creativecommons.org/licenses/by/4.0/deed.en", target = "_blank", "CC-BY-4.0"),
