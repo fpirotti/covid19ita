@@ -1,4 +1,92 @@
+# covid19ita 0.26.2
+
+* Fix covid 29 -> 19 on focus title
+
+# covid19ita 0.26.1
+
+* translation comparative piemonte veneto (#35)
+* consistent colour and names for levels eng (#33)
+* death and tests labels switched (#34)
+* fix English moduls changes for data naming
+* fix today focus date
+
+# covid19ita 0.26.0
+
+* data update (including renaming)
+* added focus module 20200331 epidemiologia comparativa Veneto-Piemonte
+* removed useless button from Plotly
+* added instructions to manage plots
+* colour and label name for levels (#33)
+
+# covid19ita 0.25.2
+
+* death and tests labels switched (#34)
+
+# covid19ita 0.25.1
+
+* Update dictionary
+* fix namespace
+* Dependencies to {scales}
+
+# covid19ita 0.25.0
+
+* update data
+* Logarithmic scale (resolve #5)
+* fix date in dropdown menu eng
+* logarithmic scale - eng (#5)
+* Solve bug (#31) 
+* Added Venezia to default provinces (fix #30)
+
+# covid19ita 0.24.0
+
+* data update
+
+# covid19ita 0.23.1
+
+* update plot tamponi/intensive (eng) (#29)
+
+# covid19ita 0.23.0
+
+* data update
+* translation focus Veneto hosp 20200328
+*update plot tamponi/intensive eng (#29)
+* focus Veneto total hosp 20200327
+* update plot tamponi/intensive (#29)
+
+# covid19ita 0.22.0
+
+* data update
+
+# covid19ita 0.21.4
+
+* update data
+
+# covid19ita 0.21.3
+
+# covid19ita 0.21.2
+
+* update selection procedure for national plots (fix #28)
+
+# covid19ita 0.21.1
+
+* fix for changing names in national dataset
+
+# covid19ita 0.21.0
+
+* update data
+* included FG in contributors
+* included CC in contributors
+* change in contributors eng (#15)
+* translated 20200325 hosp and created the relative eng-test (#27)
+
+# covid19ita 0.20.0
+
+* update data
+* fixed plot 2020 03 18 intensive Veneto
+* 20200325 module Veneto hosp
 * fix colour focus_picco (#24)
+* eng-test for veneto-intensive, Novara and picco
+* translated 20200323 picco (#23)
 
 # covid19ita 0.19.0
 

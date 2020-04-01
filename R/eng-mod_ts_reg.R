@@ -23,14 +23,15 @@ eng_mod_ts_reg_ui <- function(id){
       ),
       column(6,
         shiny::selectInput(ns("whichMeasure"), "Select measures",
-          choices  = measures("regional"),
+          choices  = measures("regional", lang = "eng"),
           selectize = TRUE,
-          selected = setdiff(measures(), c("totale_attualmente_positivi", "tamponi")),
+          selected = setdiff(measures("regional"), "tamponi"),
           multiple = TRUE,
           width = "100%"
         )
       )
     ),
+    fluidRow(shiny::checkboxInput(ns("y_log"), "Logarithmic scale")),
     fluidRow(plotlyOutput(ns("ts_plot"), height = "200%"))
   )
 }
@@ -49,9 +50,9 @@ eng_mod_ts_reg_server <- function(id, type = c("cum", "inc"), color_var = c("mea
 
 
   color_name <- color_var %>%
-    switch(,
-      Measure = "Misurazione",
-      denominazione_regione  = "Regione"
+    switch(
+      Measure = "Misura",
+      denominazione_regione  = "Region"
     )
 
 
@@ -79,11 +80,10 @@ eng_mod_ts_reg_server <- function(id, type = c("cum", "inc"), color_var = c("mea
       ) %>%
       dplyr::mutate(
         Measure = factor(.data$Measure,
-          levels = which_measure(),
-          labels = which_measure() %>%
-            stringr::str_replace_all("_", " ") %>%
-            stringr::str_to_title()
-        )
+          levels = measures("regional"),
+          labels = measures("regional") %>%
+            measure_to_labels(lang = "ita")
+      )
       )
 
       if (type == "inc") {
@@ -117,7 +117,18 @@ eng_mod_ts_reg_server <- function(id, type = c("cum", "inc"), color_var = c("mea
           panel.spacing.y = unit(2, "lines")
         )
 
-      ggplotly(gg)
+      if (input$y_log) {
+        gg <- gg + scale_y_continuous(
+          trans = 'log2',
+          breaks = scales::trans_breaks("log2", function(x) 2^x),
+          labels = scales::trans_format("log2", scales::math_format(2^.data[[".x"]]))
+        ) +
+          ylab(paste0(y_lab()," - log2"))
+      }
+
+      ggplotly(gg) %>%
+        config(modeBarButtonsToRemove = c("zoomIn2d", "zoomOut2d", "pan2d", "select2d", "lasso2d")) %>%
+        config(displaylogo = FALSE)
     })
 
   })

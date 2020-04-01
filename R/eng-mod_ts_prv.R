@@ -16,12 +16,16 @@ eng_mod_ts_prv_ui <- function(id){
         shiny::selectInput(ns("whichProvince"),  "Select provinces",
           choices  = provinces(),
           selectize = TRUE,
-          selected = c("Belluno", "Padova", "Rovigo", "Treviso", "Verona", "Vicenza"),
+          selected = c(
+            "Belluno", "Padova", "Rovigo", "Treviso", "Venezia",
+            "Verona", "Vicenza"
+          ),
           multiple = TRUE,
           width = "100%"
         )
       )
     ),
+    fluidRow(shiny::checkboxInput(ns("y_log"), "Logarithmic scale")),
     fluidRow(plotlyOutput(ns("ts_plot"), height = "200%"))
   )
 }
@@ -83,8 +87,18 @@ eng_mod_ts_prv_server <- function(id, type = c("cum", "inc")) {
         theme(
           axis.text.x = element_text(angle = 60, hjust = 1, vjust = 0.5)
         )
+      if (input$y_log) {
+        gg <- gg + scale_y_continuous(
+          trans = 'log2',
+          breaks = scales::trans_breaks("log2", function(x) 2^x),
+          labels = scales::trans_format("log2", scales::math_format(2^.data[[".x"]]))
+        ) +
+          ylab(paste0(y_lab()," - log2"))
+      }
 
-      ggplotly(gg)
+      ggplotly(gg) %>%
+        config(modeBarButtonsToRemove = c("zoomIn2d", "zoomOut2d", "pan2d", "select2d", "lasso2d")) %>%
+        config(displaylogo = FALSE)
     })
 
   })

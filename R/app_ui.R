@@ -37,7 +37,7 @@ dashboard_header <- function() {dashboardHeader(
   dropdownMenu(type = "messages",
     messageItem(
       from = "In evidenza",
-      message = "2020-03-24 Metodologia: Incertezza",
+      message = "2020-03-31 Comparativa Ven-Pie",
       icon = icon("search")
     ),
     messageItem(
@@ -74,6 +74,15 @@ dashboard_sidebar <- function() {dashboardSidebar(sidebarMenu(
 
 
   menuItem("In evidenza", icon = icon("bullseye"),
+    menuSubItem("2020-03-31 Comparativa", tabName = "20200331Comp",
+                icon = icon("flag")
+    ),
+    menuSubItem("2020-03-28 Veneto", tabName = "20200328Tot_hosp",
+                icon = icon("flag")
+    ),
+    menuSubItem("2020-03-25 Veneto", tabName = "20200325Hosp",
+                icon = icon("flag")
+    ),
     menuSubItem("2020-03-24 Metodologia", tabName = "20200323Picco",
                 icon = icon("flag")
     ),
@@ -161,7 +170,7 @@ dashboard_body <- function() {dashboardBody(
             di Scienze Cardio- Toraco- Vascolari e Sanità Pubblica --
             Università degli studi di Padova."
           ),
-          a(href = "https://linkedin.com/in/dario-gregori-2720039", target = "_blank", "LinkedIn")
+          a(href = "https://linkedin.com/in/dario-gregori-2720039/", target = "_blank", "LinkedIn")
         )
       ),
 
@@ -170,7 +179,7 @@ dashboard_body <- function() {dashboardBody(
           Biostatistica, Epidemiologia e Sanità Pubblica del Dipartimento
           di Scienze Cardio- Toraco- Vascolari e Sanità Pubblica --
           Università degli studi di Padova. Responsabile del Laboratorio di Intelligenza Artificiale per le Scienze Mediche"),
-          a(href = "https://linkedin.com/in/corradolanera", target = "_blank", "LinkedIn")
+          a(href = "https://linkedin.com/in/corradolanera/", target = "_blank", "LinkedIn")
         )
       ),
 
@@ -179,7 +188,7 @@ dashboard_body <- function() {dashboardBody(
           HTML("Prof. <strong>Paola Berchialla</strong>, Ph.D., Dipartimento di Scienze
             Cliniche e Biologiche -- Università degli Studi di Torino"
           ),
-          a(href = "https://linkedin.com/in/paola-berchialla-36b44410", target = "_blank", "LinkedIn")
+          a(href = "https://linkedin.com/in/paola-berchialla-36b44410/", target = "_blank", "LinkedIn")
         ),
         p(
           HTML(
@@ -197,13 +206,13 @@ dashboard_body <- function() {dashboardBody(
       box(width = 12, title = HTML("<strong>Modelli Previsivi</strong>"),
           p(HTML("<strong>Danila Azzolina</strong>, Ph.D., Dipartimento di Medicina Traslazionale --
           Università del Piemonte Orientale"),
-            a(href = "https://linkedin.com/in/danila-azzolina-862465166", target = "_blank", "LinkedIn")
+            a(href = "https://linkedin.com/in/danila-azzolina-862465166/", target = "_blank", "LinkedIn")
           ),
-          p(HTML("<strong>Ilaria Prosepe</strong>, MS., Unità di
+          p(HTML("<strong>Ilaria Prosepe</strong>, MSc., Unità di
            Biostatistica, Epidemiologia e Sanità Pubblica del Dipartimento
            di Scienze Cardio- Toraco- Vascolari e Sanità Pubblica --
            Università degli studi di Padova."),
-            a(href = "https://linkedin.com/in/ilaria-prosepe-1b52371a4", target = "_blank", "LinkedIn")
+            a(href = "https://linkedin.com/in/ilaria-prosepe-1b52371a4/", target = "_blank", "LinkedIn")
           )
       ),
 
@@ -214,13 +223,28 @@ dashboard_body <- function() {dashboardBody(
               Dipartimento di Statistica, Informatica, Applicazioni
               "G. Parenti" (DISIA), Università degli Studi di Firenze'
             ),
-            a(href = "https://linkedin.com/in/danila-azzolina-862465166", target = "_blank", "LinkedIn")
+            a(href = "https://linkedin.com/in/danila-azzolina-862465166/", target = "_blank", "LinkedIn")
           ),
-          p(HTML("<strong>Elisa Gallo</strong>, MS., Unità di
+          p(
+            HTML(
+              'Prof. <strong>Cristina Canova</strong>, Ph.D., Unità di
+           Biostatistica, Epidemiologia e Sanità Pubblica del Dipartimento
+           di Scienze Cardio- Toraco- Vascolari e Sanità Pubblica --
+           Università degli studi di Padova.'
+            ),
+            a(href = "https://www.linkedin.com/in/cristina-canova-05448861/", target = "_blank", "LinkedIn")
+          ),
+          p(HTML("<strong>Elisa Gallo</strong>, MSc., Unità di
            Biostatistica, Epidemiologia e Sanità Pubblica del Dipartimento
            di Scienze Cardio- Toraco- Vascolari e Sanità Pubblica --
            Università degli studi di Padova."),
             a(href = "https://www.linkedin.com/in/elisa-gallo-9b3933152/", target = "_blank", "LinkedIn")
+          ),
+          p(HTML("<strong>Francesco Garzotto</strong>, MSc, Unità di
+           Biostatistica, Epidemiologia e Sanità Pubblica del Dipartimento
+           di Scienze Cardio- Toraco- Vascolari e Sanità Pubblica --
+           Università degli studi di Padova."),
+            a(href = "https://www.linkedin.com/in/francesco-garzotto-19907826/", target = "_blank", "LinkedIn")
           )
       ),
 
@@ -270,6 +294,18 @@ dashboard_body <- function() {dashboardBody(
 
   ),
 
+  tabItem(tabName = "20200331Comp",
+          h2("Analisi comparativa tra Regione Piemonte e Regione Veneto dei dati epidemiologici relativi all’infezione da Covid-19."),
+          mod_focus_20200331_ui("ven_pie")
+  ),
+  tabItem(tabName = "20200328Tot_hosp",
+          h2("Possibile effetto sulle ospedalizzazioni delle politiche sanitarie in Veneto"),
+          mod_focus_20200328_hosp_ui("tot")
+  ),
+  tabItem(tabName = "20200325Hosp",
+          h2("Possibile effetto sulle ospedalizzazioni delle politiche sanitarie in Veneto"),
+          mod_focus_20200325_hosp_ui("hosp")
+  ),
   tabItem(tabName = "20200323Picco",
           h2("Impatto dell'incertezza statistica sulle previsioni dell'andamento del COVID-19"),
           mod_focus_20200323_picco_ui("picco")
@@ -307,6 +343,10 @@ dashboard_body <- function() {dashboardBody(
 
   tabItem(tabName = "national",
     h2("Eventi nazionali"),
+    box(width = 12, title = "Istruzioni",
+      p("È possibile attivare/disattivare la visualizzazione di una o più misure dal grafico facendo click sulle corrispondenti voci in legenda. Doppio-click per attivare/disattivare la visualizzazione esclusiva della voce selezionata."),
+      p("Fare click sul pulsante autoscale (terzo) per espandere il grafico alla massima grandezza interamente visionabile."),
+    ),
     mod_ts_ita_ui("ts_nat_cum", title = "Serie storiche degli eventi cumulati"),
     mod_ts_ita_ui("ts_nat_inc", title = "Serie storiche dei nuovi eventi giornalieri")
   ),
@@ -314,6 +354,13 @@ dashboard_body <- function() {dashboardBody(
 
   tabItem(tabName = "regional",
     h2("Eventi regionali"),
+    box(width = 12, title = "Istruzioni",
+      p("È possibile aggiungere o rimuovere la computazione dei grafici per una o più regione/misura selezionandola o deselezionandola dal corrispondente box."),
+      p("NOTA: la misurazione dei tamponi effettuati è selezionabile ma disattivata di default in quanto fuori scala rispetto alle altre misure."),
+      p(""),
+      p("È possibile attivare/disattivare la visualizzazione di una o più regioni/misure dal grafico facendo click sulle corrispondenti voci in legenda. Doppio-click per attivare/disattivare la visualizzazione esclusiva della voce selezionata."),
+      p("Fare click sul pulsante autoscale (terzo) per espandere il grafico alla massima grandezza interamente visionabile."),
+    ),
 
     h3("Serie storiche per regione"),
     fluidRow(
@@ -346,6 +393,9 @@ dashboard_body <- function() {dashboardBody(
 
   tabItem(tabName = "provincial",
     h2("Eventi provinciali"),
+    p("È possibile aggiungere o rimuovere la computazione dei grafici per una o più regione selezionandola o deselezionandola dal corrispondente box."),
+    p("È possibile attivare/disattivare la visualizzazione di una o più regioni dal grafico facendo click sulle corrispondenti voci in legenda. Doppio-click per attivare/disattivare la visualizzazione esclusiva della voce selezionata."),
+    p("Fare click sul pulsante autoscale (terzo) per espandere il grafico alla massima grandezza interamente visionabile."),
 
     h3("Serie storiche"),
     fluidRow(
